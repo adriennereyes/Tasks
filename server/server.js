@@ -1,9 +1,10 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const pool = require("./db");
 
-const port = 3000;
-const hostname = "localhost";
+const port = process.env.PORT;
+const hostname = process.env.HOSTNAME;
 
 app.use(express.json());
 
@@ -55,7 +56,7 @@ app.get("/mytasks", (req, res) => {
 });
 
 // Get a task
-app.get("/mytasks", (req, res) => {
+app.get("/mytasks/:id", (req, res) => {
   console.log(req.body);
 });
 
