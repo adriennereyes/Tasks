@@ -1,1 +1,1 @@
-# Tasks is a web application to track your daily tasks created with react and node
+# Tasks
