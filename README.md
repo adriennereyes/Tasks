@@ -1,1 +1,1 @@
-# Tasks
+# Tasks is a web application to track your daily tasks
