@@ -1,12 +1,7 @@
 const pg = require("pg");
 const Pool = pg.Pool;
-const pool = new Pool({
-  user: "postgres",
-  password: "Usausa00!",
-  database: "tasksproject",
-  host: "localhost",
-  port: 5432,
-});
+const env = require("../env.json");
+const pool = new Pool(env);
 pool.connect().then(() => {
   console.log("Connected to a database");
 });
